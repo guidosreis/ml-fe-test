@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import queryString from 'query-string'
 import axios from 'axios'
 
+import Breadcumb from '../../core/Breadcumb'
+import ProductList from '../../core/ProductList'
+
 export class Results extends Component {
   constructor(props) {
     super(props)
@@ -24,7 +27,6 @@ export class Results extends Component {
 
     axios.get(url).then(response => {
       const products = response.data.results.slice(0, 4)
-      console.log('products: ', products)
       this.setState({products})
     })
   }
@@ -33,13 +35,10 @@ export class Results extends Component {
     return (
       <React.Fragment>
         <h1>Results page</h1>
+        <Breadcumb />
         {
           !!this.state.products.length &&
-          this.state.products.map(product => (
-            <div key={product.id}>
-              {product.title}
-            </div>
-          ))
+          <ProductList products={this.state.products} />
         }
       </React.Fragment>
     )
