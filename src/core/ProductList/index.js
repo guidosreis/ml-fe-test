@@ -1,11 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import Product from './Product'
+
 const ProductList = ({ products }) => {
   return (
-    <React.Fragment>
-      {products.map(product => <Product product={product} />)}
-    </React.Fragment>
+    <div className="product-list">
+      {products.map(product => (
+        <Product product={product} key={product.id} />
+      ))}
+    </div>
   )
 }
 
