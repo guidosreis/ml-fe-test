@@ -1,0 +1,43 @@
+.product {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.product:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.product__thumb,
+.address {
+  flex-basis: 200px;
+}
+
+.product__thumb  {
+  margin: 0;
+}
+
+.product__thumb img {
+  border-radius: 6px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.product__info {
+  flex: 1;
+  padding: 10px 20px;
+}
+
+.product__info__price {
+  font-size: 30px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.address {
+  padding-top: 40px;
+}
