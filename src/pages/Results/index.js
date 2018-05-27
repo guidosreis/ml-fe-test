@@ -33,14 +33,17 @@ export class Results extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <h1>Results page</h1>
-        <Breadcumb />
-        {
-          !!this.state.products.length &&
-          <ProductList products={this.state.products} />
-        }
-      </React.Fragment>
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <Breadcumb />
+            {
+              !!this.state.products.length &&
+              <ProductList products={this.state.products} />
+            }
+          </div>
+        </div>
+      </div>
     )
   }
 }
