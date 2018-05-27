@@ -10,7 +10,7 @@ import Home from './pages/Home'
 import Results from './pages/Results'
 import Product from './pages/Product'
 
-// import './App.css'
+import './App.css'
 
 class App extends Component {
   render() {
