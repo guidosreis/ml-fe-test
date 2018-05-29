@@ -1,0 +1,13 @@
+.header {
+  background-color: #f4ff43;
+  padding: 10px 0;
+}
+
+.nav {
+  display: flex;
+}
+
+.search-bar {
+  flex: 1;
+  margin-left: 20px;
+}
