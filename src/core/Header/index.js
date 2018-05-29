@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 
+import './styles.css'
+import logo from './logo.png'
+
 export class Header extends Component {
   constructor(props) {
     super(props)
@@ -23,21 +26,36 @@ export class Header extends Component {
 
   render() {
     return (
-      <form className="search-bar" onSubmit={this.handleSearch}>
-        <input
-          type="seach"
-          className="seach-bar__input"
-          placeholder="Nunca deixe de buscar"
-          ref="searchInput"
-        />
-        <button type="submit" className="search-bar__button">
-          <i className="fa fa-search" />
-        </button>
-        {
-          this.state.redirect &&
-          <Redirect push to={this.state.redirect} />
-        }
-      </form>
+      <header className="header">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="nav">
+                <img src={logo} alt="Mercado Livre" />
+                <form className="search-bar" onSubmit={this.handleSearch}>
+                  <div className="input-group">
+                    <input
+                      type="seach"
+                      className="form-control"
+                      placeholder="Nunca deixe de buscar"
+                      ref="searchInput"
+                    />
+                    <div className="input-group-append">
+                      <button type="submit" className="btn btn-secondary">
+                        <i className="fa fa-search" />
+                      </button>
+                    </div>
+                  </div>
+                  {
+                    this.state.redirect &&
+                    <Redirect push to={this.state.redirect} />
+                  }
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
     )
   }
 }
