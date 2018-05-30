@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 import {formatPrice, formatPriceCents} from '../../utils/formatPrice'
+import Breadcumb from '../../core/Breadcumb'
+import Button from '../../core/Button'
 
 export class Product extends Component {
   constructor(props) {
@@ -39,8 +41,9 @@ export class Product extends Component {
     const { product, description } = this.state;
     return (
       <div className="container">
-        <div className="row">
-          <div className="col-12">
+        <div className="row justify-content-lg-center">
+          <div className="col col-lg-10">
+            <Breadcumb />
             <div className="product-card">
               { !!product && 
                 <div className="row">
@@ -58,6 +61,7 @@ export class Product extends Component {
                       $ {formatPrice(product.price)}
                       <small>{formatPriceCents(product.price, true)}</small>
                     </h2>
+                    <Button />
                   </div>
                   <div className="col-12">
                     <h3>Descripción del produto</h3>
