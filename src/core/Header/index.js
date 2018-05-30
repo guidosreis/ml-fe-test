@@ -28,8 +28,8 @@ export class Header extends Component {
     return (
       <header className="header">
         <div className="container">
-          <div className="row">
-            <div className="col-12">
+          <div className="row justify-content-lg-center">
+            <div className="col col-lg-10">
               <div className="nav">
                 <img src={logo} alt="Mercado Livre" />
                 <form className="search-bar" onSubmit={this.handleSearch}>
