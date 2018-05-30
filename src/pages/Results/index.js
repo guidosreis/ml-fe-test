@@ -34,8 +34,8 @@ export class Results extends Component {
   render() {
     return (
       <div className="container">
-        <div className="row">
-          <div className="col-12">
+        <div className="row justify-content-lg-center">
+          <div className="col col-lg-10">
             <Breadcumb />
             {
               !!this.state.products.length &&
