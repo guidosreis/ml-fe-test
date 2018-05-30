@@ -1,14 +1,32 @@
-.product {
-  display: flex;
+.product-link {
+  background-color: #ffffff;
   border-bottom: 1px solid #eee;
-  padding-bottom: 15px;
+  display: block;
+  padding: 15px;
   margin-bottom: 15px;
+  position: relative;
+  transition: all .2s;
 }
 
-.product:last-child {
+.product-link:first-child {
+  border-radius: 8px 8px 0 0;
+}
+
+.product-link:last-child {
+  border-radius: 0 0 8px 8px;
   border-bottom: 0;
-  padding-bottom: 0;
   margin-bottom: 0;
+}
+
+.product-link:hover {
+  text-decoration: none;
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.product {
+  color: #222222;
+  display: flex;
 }
 
 .product__thumb,
