@@ -37,7 +37,7 @@ export class Header extends Component {
                     <input
                       type="seach"
                       className="form-control"
-                      placeholder="Nunca deixe de buscar"
+                      placeholder="Nunca deijes de buscar"
                       ref="searchInput"
                     />
                     <div className="input-group-append">
