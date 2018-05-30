@@ -20,7 +20,7 @@ export class Header extends Component {
     const q = this.refs.searchInput.value
 
     this.setState({
-      redirect: `results?q=${q}`
+      redirect: `/results?q=${q}`
     })
   }
 
