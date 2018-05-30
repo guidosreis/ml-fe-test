@@ -9,6 +9,7 @@ export class Product extends Component {
     super(props)
 
     this.state = {
+      loading: true,
       product: null,
       description: null
     }
@@ -31,6 +32,8 @@ export class Product extends Component {
       })
     } catch (error) {
       // tratar erro
+    } finally {
+      this.setState({loading: false})
     }
   }
 
@@ -40,6 +43,7 @@ export class Product extends Component {
         <div className="row justify-content-lg-center">
           <div className="col col-lg-10">
             <Breadcumb />
+            { this.state.loading && <p>Carregando...</p> }
             { !!this.state.product && 
               <ProductCard
                 product={this.state.product}
